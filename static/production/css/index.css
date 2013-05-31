@@ -1,0 +1,29 @@
+.attachement {
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: rgba(67, 138, 188, 0.5);
+  z-index: 2;
+  color: #fcfcfc;
+}
+.attachement .members {
+  list-style-type: none;
+}
+.attachement .members li {
+  padding-bottom: 15px;
+}
+.attachement h1 {
+  color: #EAEAEA;
+  margin-bottom: 10px;
+}
+.bgCarousel {
+  position: relative;
+}
+.bgCarousel .bgimg {
+  width: 100%;
+}
+.footer {
+  color: #888;
+}
