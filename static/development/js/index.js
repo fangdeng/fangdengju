@@ -5,13 +5,36 @@ define(function(require, exports, module) {
     require('bootstrap')($);
 
     $(window).bind('resize', function() {
-        resizeImg();
+        resizeBackgroundImg();
     });
 
     $(window).trigger('resize');
 
-    function resizeImg() {
-        var screenHeight = $(window).innerHeight();
-        $('div.carousel-inner img', '#screen').css('height', screenHeight);
+
+    var headerheight = $('div.headerDock', '#screen').outerHeight();
+
+    console.log(headerheight)
+
+    function resizeBackgroundImg() {
+        var screenHeight = $(window).innerHeight(),
+            screenWidth = $(window).innerWidth(),
+            contentHeight = screenHeight - ($('div.headerDock', '#screen').outerHeight() + 1);
+
+        $('div.bgWrapper', '#screen').css({
+            'height': screenHeight,
+            'width': screenWidth,
+            'overflow': 'hidden'
+        });
+
+        $('div.bgWrapper img', '#screen').css({
+            'height': screenHeight,
+            'width': screenWidth
+        });
+
+        $('div.main div.content', '#screen').css({
+            'height': contentHeight
+        });
+
+
     }
 });

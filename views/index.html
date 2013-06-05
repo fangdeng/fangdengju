@@ -1,53 +1,49 @@
 <% include header.html %>
 <link rel="stylesheet" href="/static/production/css/index.css">
+        
 <div id="screen">
-    <div class="bgCarousel">
-        <div class="attachement">
-            <h1>方凳聚</h1>
-            <p>通用组成员：</p>
-            <ul class="members">
-                <% members.forEach(function(member){ %>
-                <li><%= member %></li>
-                <% }) %>
-            </ul>
-        </div>
-
-        <div id="myCarousel" class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-                <li data-target="#myCarousel" data-slide-to="5"></li>
-            </ol>
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-                <div class="active item">
-                    <img src="/static/img/bgimg/bg_01.png" class="bgimg">
-                </div>
-                <div class="item">
-                    <img src="/static/img/bgimg/bg_02.png" class="bgimg">
-                </div>
-                <div class="item">
-                    <img src="/static/img/bgimg/bg_03.png" class="bgimg">
-                </div>
-                <div class="item">
-                    <img src="/static/img/bgimg/bg_04.png" class="bgimg">
-                </div>
-                <div class="item">
-                    <img src="/static/img/bgimg/bg_05.png" class="bgimg">
-                </div>
-                <div class="item">
-                    <img src="/static/img/bgimg/bg_06.png" class="bgimg">
+    <div class="bgWrapper">
+        <img src="/static/img/bgimg/bg_10.png" alt=""/>
+    </div>
+    <div class="main">
+        <div class="headerDock">
+            <div class="logo">
+               <p class="title"><a href="/">方凳聚</a></p>
+               <p class="subTitle">晓我工作，聚我所爱</p>
+            </div>
+            <div class="navBar btn-toolbar">
+                <div class="btn-group">
+                    <a class="btn btn-large active" href="#"><i class="icon-th"></i>随便逛逛</a>
+                    <a class="btn btn-large" href="#"><i class="icon-briefcase"></i>我的工具箱</a>
+                    <a class="btn btn-large" href="#"><i class="icon-tasks"></i>我的工作流</a>
                 </div>
             </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+        <div class="seprateLine"></div>
+        <div class="content">
+            <div class="cate">
+                <div class="cateName">设计吧</div>
+            </div>
+            <div class="cate">
+                <div class="leftLine"></div>
+                <div class="cateName">开发喽</div>
+            </div>
+            <div class="cate">
+                <div class="leftLine"></div>
+                <div class="cateName">测试啊</div>
+            </div>
+            <div class="cate">
+                <div class="leftLine"></div>
+                <div class="cateName">发布呀</div>
+            </div>
+            <div class="cate">
+                <div class="leftLine"></div>
+                <div class="cateName">监控哩</div>
+            </div>
         </div>
     </div>
 </div>
+    
 
 
 <script type="text/javascript"

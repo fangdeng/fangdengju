@@ -1,0 +1,58 @@
+<% include header.html %>
+<link rel="stylesheet" href="/static/production/css/index.css">
+<div id="screen">
+    <div class="bgCarousel">
+        <div class="attachement">
+            <h1>方凳聚</h1>
+            <p>通用组成员：</p>
+            <ul class="members">
+                <% members.forEach(function(member){ %>
+                <li><%= member %></li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img src="/static/img/bgimg/bg_01.png" class="bgimg">
+                </div>
+                <div class="item">
+                    <img src="/static/img/bgimg/bg_02.png" class="bgimg">
+                </div>
+                <div class="item">
+                    <img src="/static/img/bgimg/bg_03.png" class="bgimg">
+                </div>
+                <div class="item">
+                    <img src="/static/img/bgimg/bg_04.png" class="bgimg">
+                </div>
+                <div class="item">
+                    <img src="/static/img/bgimg/bg_05.png" class="bgimg">
+                </div>
+                <div class="item">
+                    <img src="/static/img/bgimg/bg_06.png" class="bgimg">
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript"
+        src="/static/seajs/dist/sea.js"
+        data-config="/static/config.js"
+        data-main="/static/development/js/index.js"></script>
+
+<% include footer.html %>

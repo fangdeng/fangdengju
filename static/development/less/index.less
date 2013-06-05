@@ -1,34 +1,111 @@
 html {
   overflow: hidden;
 }
-.attachement {
-  margin: 10px 0 10px 10px;
-  padding: 10px;
+
+.bgWrapper {
   position: absolute;
-  left: 50px;
   top: 0;
-  background: rgba(67,138,188,.5);
-  z-index: 2;
-  color: #fcfcfc;
-  .members {
-    list-style-type: none;
-    li {
-      padding-bottom: 15px;
-    }
-  }
-  h1 {
-    color: #EAEAEA;
-    margin-bottom: 10px;
-  }
+  left: 0;
+  z-index: -10;
 }
 
-.bgCarousel {
-  position: relative;
-  .bgimg{
+.bgWrapper img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+
+  .headerDock {
+    height: 60px;
+    overflow: hidden;
+    padding: 10px;
+    background: url(/static/img/amg_top.png) repeat-x;
+    position: relative;
+
+    .navBar {
+      width: 430px;
+    }
+
+    .logo {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: #FFFFFF;
+
+      p {
+        text-align: right;
+      }
+
+      .title {
+        font-size: 30px;
+        a {
+          color: #fff;
+          &:hover {
+            color: #005580;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .subTitle {
+        padding-top: 5px;
+      }
+    }
+  ;
+  }
+
+  .seprateLine {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #666;
+    font-size: 0;
+    height: 0;
     width: 100%;
   }
-}
 
-.footer {
-  color: #888;
+  .content {
+    overflow: hidden;
+    background: url(/static/img/amg_body.png) repeat;
+
+    .cate {
+      width: 20%;
+      height: 100%;
+      overflow: hidden;
+      float: left;
+      position: relative;
+      padding: 10px 0 0 0;
+
+      .leftLine {
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: -1px;
+        top: 0;
+        background: url(/static/img/line_y.png) repeat-y;
+      }
+
+      .cateName {
+        width: 30px;
+        height: 100px;
+        top: 0;
+        right: 0;
+        position: absolute;
+        font-size: 22px;
+        line-height: 30px;
+        padding-top: 10px;
+        color: #fff;
+        opacity: .3;
+        filter: alpha(opacity=30);
+      }
+
+    }
+  }
 }
