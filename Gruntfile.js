@@ -22,6 +22,11 @@ module.exports = function(grunt) {
                 files: {
                     'static/bootstrap/js/bootstrap.min.js': 'static/bootstrap/js/bootstrap.js'
                 }
+            },
+            jqueryui: {
+                files: {
+                    'static/lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js': 'static/lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js'
+                }
             }
         }
     });
@@ -32,6 +37,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('watchless', ['watch']);
     grunt.registerTask('bootstrapmin', ['uglify:bootstrap']);
+    grunt.registerTask('jqueryuimin', ['uglify:jqueryui']);
 
 };
 

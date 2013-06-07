@@ -3,38 +3,15 @@ define(function(require, exports, module) {
     var $ = require('jquery');
     // 引入bootstrap
     require('bootstrap')($);
+    // 引入jquery ui
+    require('jqueryui')($);
 
-    $(window).bind('resize', function() {
-        resizeBackgroundImg();
-    });
+    var resizePage = require('./pageresize');
 
-    $(window).trigger('resize');
+    resizePage.init();
 
+    var dialog = require('./dialog');
 
-    var headerheight = $('div.headerDock', '#screen').outerHeight();
+    dialog.init();
 
-    console.log(headerheight)
-
-    function resizeBackgroundImg() {
-        var screenHeight = $(window).innerHeight(),
-            screenWidth = $(window).innerWidth(),
-            contentHeight = screenHeight - ($('div.headerDock', '#screen').outerHeight() + 1);
-
-        $('div.bgWrapper', '#screen').css({
-            'height': screenHeight,
-            'width': screenWidth,
-            'overflow': 'hidden'
-        });
-
-        $('div.bgWrapper img', '#screen').css({
-            'height': screenHeight,
-            'width': screenWidth
-        });
-
-        $('div.main div.content', '#screen').css({
-            'height': contentHeight
-        });
-
-
-    }
 });
