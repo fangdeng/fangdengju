@@ -132,8 +132,8 @@ body {
   float: left;
   margin-top: 2px;
   border: 1px solid #F3F7F4;
-  -webkit-box-shadow: -3px 3px 5px 2px rgba(37, 106, 54, 0.5);
-  box-shadow: -3px 3px 5px 2px rgba(37, 106, 54, 0.5);
+  -webkit-box-shadow: -3px 3px 5px 2px rgba(227, 227, 227, 0.3);
+  box-shadow: -3px 3px 5px 2px rgba(227, 227, 227, 0.3);
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
