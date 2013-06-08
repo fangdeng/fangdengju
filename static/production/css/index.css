@@ -131,6 +131,11 @@ body {
 .main .content .cate .cateWrapper .tools .appIcon {
   float: left;
   margin-top: 2px;
+  border: 1px solid #F3F7F4;
+  -webkit-box-shadow: -3px 3px 5px 2px rgba(37, 106, 54, 0.5);
+  box-shadow: -3px 3px 5px 2px rgba(37, 106, 54, 0.5);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .main .content .cate .cateWrapper .tools .appIcon img {
   width: 26px;
