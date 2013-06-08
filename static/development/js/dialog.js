@@ -46,46 +46,57 @@ define(function(require, exports, module) {
             closeDialog($(this));
         });
 
+        // 刷新按钮
+        $('body').on('click', 'div.customDialog a.refreshApp', function(e) {
+            e.preventDefault();
+            refreshIframe($(this));
+        });
+
 
     }
     // 创建对话框节点
     function createDialog( thisElement ) {
-        var randomID = Math.floor(Math.random() * 1000),
-            dialogID = 'dialog_' + randomID,
-            hasDialogId = thisElement.data('dialogId'),
+        var hasDialogId = thisElement.attr('dialogId'),
+            appName = thisElement.data('appName'),
             appUrl = thisElement.data('appLink');
 
-        console.log(hasDialogId)
-
         if( typeof hasDialogId !== 'undefined' && hasDialogId !== '' ) {
-            $('#' + hasDialogId).dialog('open');
+            $('#' + hasDialogId).closest('div.ui-dialog').show();
         } else {
+            var randomID = Math.floor(Math.random() * 1000),
+                dialogID = 'dialog_' + randomID;
+
             $('<div id="' + dialogID + '"><iframe src="' + appUrl + '" frameborder="0" width="100%" height="100%"></iframe></div>').appendTo($('div.main', '#screen')).hide();
-            $('a.openApp', '#screen').attr('data-dialog-id', dialogID);
-            $('a.openApp', '#screen').attr('appIndex', dialogID);
-            initDialog(dialogID);
+            thisElement.attr('dialogId', dialogID);
+            initDialog(dialogID, appName);
         }
     }
 
-    function initDialog( dialogID ) {
+    function initDialog( dialogID, appName ) {
         var id = '#' + dialogID,
             windowHeight = $(window).innerHeight(),
+            offset = Math.floor(Math.random() * 100),
             windowWidth = $(window).innerWidth();
 
         $(id).dialog({
             autoOpen: false,
             dialogClass: 'customDialog',
             width: windowWidth * 0.6,
-            height: windowHeight * 0.9
+            height: windowHeight * 0.9,
+            position: {
+                my: "center",
+                at: "center+"+ offset,
+                of: window
+            }
         });
 
         var toolbar = '<div class="handleBar">\
                             <div class="handleFunction">\
-                                <a href="#" class="refresh" title="刷新当前页面"><i class="icon-refresh"></i></a>\
+                                <a href="#" class="refreshApp" title="刷新当前页面"><i class="icon-refresh"></i></a>\
                                 <a href="#" class="addToolBox" title="添加到工具箱"><i class="icon-plus"></i></a>\
                                 <a href="#" class="addWorkflow" title="添加到工作流"><i class="icon-retweet"></i></a>\
                             </div>\
-                            <div class="title">响应式设计工具</div>\
+                            <div class="title">' + appName + '</div>\
                             <div class="handleWindow">\
                                 <a href="#" class="minisize"><i class="icon-minisize"></i></a>\
                                 <a href="#" class="maxsize"><i class="icon-maxsize"></i></a>\
@@ -99,18 +110,16 @@ define(function(require, exports, module) {
     }
 
     function miniDialog( ele ) {
-        ele.closest('div.ui-dialog-titlebar').next().dialog('close');
+        ele.closest('div.ui-dialog').hide();
     }
 
     function maxDialog( ele ) {
         var windowHeight = $(window).innerHeight(),
             windowWidth = $(window).innerWidth();
 
-        ele.closest('div.ui-dialog').css({
+        ele.closest('div.ui-dialog-titlebar').next().dialog({
             width: windowWidth,
-            height: windowHeight,
-            top: 0,
-            left: 0
+            height: windowHeight
         });
 
         ele.addClass('restore');
@@ -118,7 +127,7 @@ define(function(require, exports, module) {
 
     function closeDialog( ele ) {
         var id = ele.closest('div.ui-dialog-titlebar').next().attr('id');
-        $('a[appIndex=' + id +']', '#screen').attr('data-dialog-id', '');
+        $('a[dialogId=' + id +']', '#screen').attr('dialogId', '');
         ele.closest('div.ui-dialog-titlebar').next().dialog('destroy');
     }
 
@@ -126,13 +135,17 @@ define(function(require, exports, module) {
         var windowHeight = $(window).innerHeight(),
             windowWidth = $(window).innerWidth();
 
-        ele.closest('div.ui-dialog').css({
+        ele.closest('div.ui-dialog-titlebar').next().dialog({
             width: windowWidth * 0.6,
-            height: windowHeight * 0.9,
-            top: (windowHeight - windowHeight * 0.9) / 2,
-            left: (windowWidth - windowWidth * 0.6) / 2
+            height: windowHeight * 0.9
         });
 
         ele.removeClass('restore');
+    }
+
+    function refreshIframe( ele ) {
+        var src = ele.closest('div.ui-dialog').find('iframe')[0].src;
+
+        ele.closest('div.ui-dialog').find('iframe')[0].src = src;
     }
 });

@@ -155,7 +155,7 @@ body {
 .customDialog .handleBar .handleFunction {
   width: 100px;
 }
-.customDialog .handleBar .handleFunction .refresh {
+.customDialog .handleBar .handleFunction .refreshApp {
   margin-right: 5px;
 }
 .customDialog .handleBar .handleFunction .addToolBox {
@@ -182,7 +182,7 @@ body {
   margin-right: 5px;
 }
 .customDialog .handleBar .handleWindow .icon-minisize:hover {
-  background-position: -9px -7px;
+  background-position: -9px -8px;
 }
 .customDialog .handleBar .handleWindow .icon-maxsize {
   background-position: -38px -36px;
