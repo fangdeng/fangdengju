@@ -22,6 +22,11 @@ define(function(require, exports, module) {
 
         });
 
+        // 双击打开APP
+        $('div.tools', '#screen').bind('dblclick', function() {
+            $(this).find('a.openApp').click();
+        });
+
         // 最小化对话框
         $('body').on('click', 'div.customDialog a.minisize', function(e) {
             e.preventDefault();
@@ -52,12 +57,19 @@ define(function(require, exports, module) {
             refreshIframe($(this));
         });
 
+        // 点击任务栏中任务
+        $('body').on('click', 'div.taskContainer div.task', function(e) {
+            e.preventDefault();
+            showThisTask($(this));
+        });
+
 
     }
     // 创建对话框节点
     function createDialog( thisElement ) {
         var hasDialogId = thisElement.attr('dialogId'),
             appName = thisElement.data('appName'),
+            imgsrc = thisElement.data('appImgSrc'),
             appUrl = thisElement.data('appLink');
 
         if( typeof hasDialogId !== 'undefined' && hasDialogId !== '' ) {
@@ -68,11 +80,11 @@ define(function(require, exports, module) {
 
             $('<div id="' + dialogID + '"><iframe src="' + appUrl + '" frameborder="0" width="100%" height="100%"></iframe></div>').appendTo($('div.main', '#screen')).hide();
             thisElement.attr('dialogId', dialogID);
-            initDialog(dialogID, appName);
+            initDialog(dialogID, appName, imgsrc);
         }
     }
 
-    function initDialog( dialogID, appName ) {
+    function initDialog( dialogID, appName, imgsrc ) {
         var id = '#' + dialogID,
             windowHeight = $(window).innerHeight(),
             offset = Math.floor(Math.random() * 100),
@@ -96,7 +108,7 @@ define(function(require, exports, module) {
                                 <a href="#" class="addToolBox" title="添加到工具箱"><i class="icon-plus"></i></a>\
                                 <a href="#" class="addWorkflow" title="添加到工作流"><i class="icon-retweet"></i></a>\
                             </div>\
-                            <div class="title">' + appName + '</div>\
+                            <div class="title ms-yh">' + appName + '</div>\
                             <div class="handleWindow">\
                                 <a href="#" class="minisize"><i class="icon-minisize"></i></a>\
                                 <a href="#" class="maxsize"><i class="icon-maxsize"></i></a>\
@@ -107,6 +119,8 @@ define(function(require, exports, module) {
         $(id).prev().html(toolbar);
 
         $(id).dialog( "open" );
+
+        pushToTaskBar(dialogID, imgsrc, appName);
     }
 
     function miniDialog( ele ) {
@@ -129,6 +143,9 @@ define(function(require, exports, module) {
         var id = ele.closest('div.ui-dialog-titlebar').next().attr('id');
         $('a[dialogId=' + id +']', '#screen').attr('dialogId', '');
         ele.closest('div.ui-dialog-titlebar').next().dialog('destroy');
+
+        // 删除任务栏上的任务
+        $('div.taskContainer', '#screen').find('div[dialogId=' + id +']').remove();
     }
 
     function restoreDialog( ele ) {
@@ -147,5 +164,27 @@ define(function(require, exports, module) {
         var src = ele.closest('div.ui-dialog').find('iframe')[0].src;
 
         ele.closest('div.ui-dialog').find('iframe')[0].src = src;
+    }
+
+    function pushToTaskBar( dialogId, imgsrc, title ) {
+        var html = '<div class="task taskCurrent" dialogId="' + dialogId + '">\
+                        <a class="taskItem" href="#">\
+                            <div class="taskIcon">\
+                                <img src="/static/upload/' + imgsrc + '" alt=""/>\
+                            </div>\
+                            <div class="taskTitle" title="' + title + '">' + title + '</div>\
+                        </a>\
+                    </div>';
+
+        $('div.taskContainer div.task', '#screen').removeClass('taskCurrent');
+
+        $('div.taskContainer', '#screen').append(html);
+    }
+
+    function showThisTask( ele ) {
+        var id = '#' + ele.attr('dialogId');
+        $(id).closest('div.ui-dialog').toggle();
+        $('div.taskContainer div.task', '#screen').removeClass('taskCurrent');
+        ele.addClass('taskCurrent');
     }
 });

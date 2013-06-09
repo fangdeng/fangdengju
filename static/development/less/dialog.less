@@ -1,0 +1,83 @@
+.ui-dialog {
+  .ui-dialog-content {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ui-dialog-titlebar {
+    padding: 0 10px;
+    height: 25px;
+    background: url('/static/img/repeat_x.png') repeat 0 -31px;
+    border: none;
+    border-bottom: 1px solid #fcfcfc;
+  }
+}
+
+.customDialog {
+  .handleBar {
+    .handleFunction {
+      width: 100px;
+      .refreshApp {
+        margin-right: 5px;
+      }
+
+      .addToolBox {
+        margin-right: 5px;
+      }
+    }
+
+    .title {
+      color: #444;
+      position: absolute;
+      left: 45%;
+      top: 0;
+    }
+
+    .handleWindow {
+      position: absolute;
+      right: 10px;
+      top: 0;
+
+      .icon-minisize, .icon-maxsize, .icon-close {
+        background-image: url('/static/img/dialog.png');
+      }
+
+      .icon-minisize {
+        background-position: -9px -36px;
+        margin-right: 5px;
+
+        &:hover {
+          background-position: -9px -8px;
+        }
+      }
+
+      .icon-maxsize {
+        background-position: -38px -36px;
+        margin-right: 5px;
+
+        &:hover {
+          background-position: -38px -7px;
+        }
+      }
+
+      .icon-close {
+        background-position: -67px -36px;
+
+        &:hover {
+          background-position: -67px -7px;
+        }
+      }
+
+      .restore {
+        .icon-maxsize {
+          background-position: -97px -37px;
+          margin-right: 5px;
+
+          &:hover {
+            background-position: -97px -8px;
+          }
+        }
+      }
+    }
+  }
+}

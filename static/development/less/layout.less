@@ -1,0 +1,329 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: #5f9ea0;
+}
+
+.ms-yh{
+  font-family:\5FAE\8F6F\96C5\9ED1,
+                \9ED1\4F53,
+  \6587\6CC9\9A7F\6B63\9ED1\4F53,
+  \534E\6587\7EC6\9ED1;
+  font-weight:400;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.clear:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: "\0020";
+}
+
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.bgWrapper img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 99;
+
+  .headerDock {
+    height: 60px;
+    overflow: hidden;
+    padding: 10px;
+    background: url(/static/img/amg_top.png) repeat-x;
+    position: relative;
+
+    .navBar {
+      width: 430px;
+    }
+
+    .login {
+      position: absolute;
+      right: 20%;
+      top: 20px;
+    }
+
+    .logo {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      color: #FFFFFF;
+      width: 163px;
+      height: 86px;
+      background-image: url('/static/img/logo.png');
+
+      &:hover {
+        background-image: url('/static/img/logo_hover.png');
+      }
+    }
+  }
+
+  .seprateLine {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #666;
+    font-size: 0;
+    height: 0;
+    width: 100%;
+  }
+
+  .content {
+    overflow: hidden;
+    background: url(/static/img/amg_body.png) repeat;
+
+    .cate {
+      width: 20%;
+      height: 100%;
+      overflow: hidden;
+      float: left;
+      position: relative;
+      padding: 10px 0 0 0;
+
+      .leftLine {
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: -1px;
+        top: 0;
+        background: url(/static/img/line_y.png) repeat-y;
+      }
+
+      .cateName {
+        width: 30px;
+        height: 100px;
+        top: 0;
+        right: 0;
+        position: absolute;
+        font-size: 22px;
+        line-height: 30px;
+        padding-top: 10px;
+        color: #fff;
+        opacity: .3;
+        filter: alpha(opacity=30);
+      }
+      
+      .cateWrapper {
+        position: relative;
+        min-width: 180px;
+        height: 100%;
+        overflow: hidden;
+        z-index: 2;
+        margin: 5px 0;
+
+        .tools {
+          height: 30px;
+          width: auto;
+          font-size: 12px;
+          color: #fff;
+          cursor: pointer;
+          margin: 0 0 8px 0;
+          padding-left: 20px;
+
+          &:hover {
+            background: rgba(255,255,255,.4);
+          }
+
+          .toolsInner {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          .appIcon {
+            float: left;
+            margin-top: 2px;
+            border: 1px solid #F3F7F4;
+            -webkit-box-shadow: -3px 3px 5px 2px rgba(227, 227, 227, .3);
+            box-shadow: -3px 3px 5px 2px rgba(227, 227, 227, .3);
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+
+            img {
+              width: 26px;
+              height: 26px;
+            }
+          }
+
+          .appName {
+            height: 20px;
+            margin: 6px 0 0 10px;
+            overflow: hidden;
+            float: left;
+          }
+        }
+      }
+
+    }
+  }
+
+  .bottomTaskBg {
+    height: 64px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: url(/static/img/bg_task_b.png) repeat-x 0 41px;
+  }
+
+  .bottomBar {
+    height: 64px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    .taskContainer {
+      height: 64px;
+      overflow: hidden;
+      float: left;
+
+      .task {
+        height: 100%;
+        float: left;
+        width: 114px;
+        overflow: hidden;
+        -webkit-transition: width .5s ease;
+        -moz-transition: width .5s ease;
+        -o-transition: width .5s ease,;
+        transition: width .5s ease;
+        margin-left: -3px;
+
+        .taskItem {
+          width: 114px;
+          height: 100%;
+          margin: 0 1px;
+          float: left;
+          display: block;
+          background: url(/static/img/bg_task_nor.png) no-repeat;
+          vertical-align: middle;
+
+          &:hover {
+            background: url(/static/img/bg_task_over.png) no-repeat;
+          }
+
+          .taskIcon {
+            width: 32px;
+            height: 32px;
+            margin: 22px 5px;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid #fcfcfc;
+
+            img {
+              width: 32px;
+              height: 32px;
+              float: left;
+              cursor: pointer;
+            }
+          }
+
+          .taskTitle {
+            width: 66px;
+            height: 36px;
+            margin-top: 27px;
+            color: #FFF;
+            float: left;
+            line-height: 36px;
+            overflow: hidden;
+            cursor: pointer;
+            padding-right: 4px;
+          }
+        }
+      }
+
+      .taskCurrent {
+        .taskItem {
+          background: url(/static/img/bg_task_cur.png) no-repeat;
+        }
+      }
+    }
+
+    .prevTask {
+      width: 54px;
+      float: left;
+      height: 100%;
+      overflow: hidden;
+      background: url(/static/img/bg_task_page_l.png) no-repeat;
+      display: none;
+
+      .taskPrev {
+        display: block;
+        width: 20px;
+        height: 35px;
+        margin-top: 20px;
+        margin-left: 17px;
+        background: url(/static/img/bg_task_page.png) no-repeat -15px -50px;
+
+        &:hover {
+          background-position: -15px -2px;
+        }
+      }
+
+      .taskPrevDisabled {
+        background-position: -15px -97px;
+        cursor: default;
+
+        &:hover {
+          background-position: -15px -97px;
+        }
+      }
+    }
+
+    .nextTask {
+      width: 54px;
+      float: left;
+      margin-left: -3px;
+      height: 100%;
+      overflow: hidden;
+      background: url(/static/img/bg_task_page_r.png) no-repeat;
+      display: none;
+      .taskNext {
+        display: block;
+        width: 45px;
+        height: 35px;
+        margin-top: 20px;
+        margin-left: 15px;
+        background: url(/static/img/bg_task_page.png) no-repeat -65px -50px;
+
+        &:hover {
+          background-position: -65px -2px;
+        }
+      }
+
+      .taskNextDisabled {
+        background-position: -66px -97px;
+        cursor: default;
+
+        &:hover {
+          background-position: -66px -97px;
+        }
+      }
+    }
+  }
+}
