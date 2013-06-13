@@ -78,7 +78,7 @@ define(function(require, exports, module) {
             var randomID = Math.floor(Math.random() * 1000),
                 dialogID = 'dialog_' + randomID;
 
-            $('<div id="' + dialogID + '"><iframe src="' + appUrl + '" frameborder="0" width="100%" height="100%"></iframe></div>').appendTo($('div.main', '#screen')).hide();
+            $('<div id="' + dialogID + '"><div class="waitLoadding"><div class="wrapper"><img src="/static/img/loading.gif" alt=""/><div class="shuoming">稍等片刻...</div></div></div><iframe src="' + appUrl + '" frameborder="0" width="100%" height="100%"></iframe></div>').appendTo($('div.main', '#screen')).hide();
             thisElement.attr('dialogId', dialogID);
             initDialog(dialogID, appName, imgsrc);
         }
@@ -119,6 +119,10 @@ define(function(require, exports, module) {
         $(id).prev().html(toolbar);
 
         $(id).dialog( "open" );
+
+        $(id).find('iframe').bind('load', function() {
+            $('div.waitLoadding', id).hide();
+        });
 
         pushToTaskBar(dialogID, imgsrc, appName);
     }
