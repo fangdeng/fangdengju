@@ -6,6 +6,9 @@ define(function(require, exports, module) {
     // 引入jquery ui
     require('jqueryui')($);
 
+    require('mousewheel')($);
+    require('scrollbar')($);
+
     var resizePage = require('./pageresize');
 
     resizePage.init();
@@ -13,5 +16,7 @@ define(function(require, exports, module) {
     var dialog = require('./dialog');
 
     dialog.init();
+
+    $('div.cateWrapper', '#screen').perfectScrollbar();
 
 });

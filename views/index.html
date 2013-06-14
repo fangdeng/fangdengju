@@ -1,6 +1,7 @@
 <% include header.html %>
 <link rel="stylesheet" href="/static/production/css/layout.css">
 <link rel="stylesheet" href="/static/production/css/dialog.css">
+<link rel="stylesheet" href="/static/scrollbar/perfect-scrollbar.css">
 
 <div id="screen">
     <div class="bgWrapper">
@@ -24,8 +25,9 @@
         <div class="seprateLine"></div>
         <div class="content">
             <div class="cate">
-                <div class="cateName ms-yh">设计吧</div>
+                <div class="cateName ms-yh">设计</div>
                 <div class="cateWrapper">
+                    <div class="hasScroll">
                     <% for(var i = 0; i < tools.design.length; i++) {%>
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
@@ -41,13 +43,14 @@
                             </ul>
                         </div>
                     <% } %>
-                    <div class="scroolBar"></div>
+                    </div>
                 </div>
             </div>
             <div class="cate">
                 <div class="leftLine"></div>
-                <div class="cateName ms-yh">开发喽</div>
+                <div class="cateName ms-yh">开发</div>
                 <div class="cateWrapper">
+                    <div class="hasScroll">
                     <% for(var i = 0; i < tools.development.length; i++) {%>
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
@@ -63,14 +66,14 @@
                             </ul>
                         </div>
                     <% } %>
-
-                    <div class="scroolBar"></div>
+                    </div>
                 </div>
             </div>
             <div class="cate">
                 <div class="leftLine"></div>
-                <div class="cateName ms-yh">测试啊</div>
+                <div class="cateName ms-yh">测试</div>
                 <div class="cateWrapper">
+                    <div class="hasScroll">
                     <% for(var i = 0; i < tools.test.length; i++) {%>
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
@@ -86,14 +89,14 @@
                             </ul>
                         </div>
                     <% } %>
-
-                    <div class="scroolBar"></div>
+                    </div>
                 </div>
             </div>
             <div class="cate">
                 <div class="leftLine"></div>
-                <div class="cateName ms-yh">发布呀</div>
+                <div class="cateName ms-yh">发布</div>
                 <div class="cateWrapper">
+                    <div class="hasScroll">
                     <% for(var i = 0; i < tools.publish.length; i++) {%>
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
@@ -109,14 +112,14 @@
                             </ul>
                         </div>
                     <% } %>
-
-                    <div class="scroolBar"></div>
+                    </div>
                 </div>
             </div>
             <div class="cate">
                 <div class="leftLine"></div>
-                <div class="cateName ms-yh">监控哩</div>
+                <div class="cateName ms-yh">监控</div>
                 <div class="cateWrapper">
+                    <div class="hasScroll">
                     <% for(var i = 0; i < tools.monitoring.length; i++) {%>
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
@@ -132,8 +135,7 @@
                             </ul>
                         </div>
                     <% } %>
-
-                    <div class="scroolBar"></div>
+                    </div>
                 </div>
             </div>
         </div>

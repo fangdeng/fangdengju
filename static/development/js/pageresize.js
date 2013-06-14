@@ -15,6 +15,7 @@ define(function(require, exports, module) {
         });
 
         $(window).trigger('resize');
+
     }
 
     function resizeBackgroundImg() {

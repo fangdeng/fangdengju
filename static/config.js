@@ -9,7 +9,9 @@ seajs.config({
             exports: 'jQuery'
         },
         'bootstrap': '/static/bootstrap/js/bootstrap.min.js',
-        'jqueryui': '/static/lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js'
+        'jqueryui': '/static/lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js',
+        'mousewheel': '/static/scrollbar/jquery.mousewheel.js',
+        'scrollbar': '/static/scrollbar/perfect-scrollbar.js'
     },
     debug: true
 });

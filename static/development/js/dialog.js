@@ -121,7 +121,7 @@ define(function(require, exports, module) {
         $(id).dialog( "open" );
 
         $(id).find('iframe').bind('load', function() {
-            $('div.waitLoadding', id).hide();
+            $('div.waitLoadding', id).remove();
         });
 
         pushToTaskBar(dialogID, imgsrc, appName);

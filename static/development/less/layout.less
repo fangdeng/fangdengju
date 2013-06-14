@@ -124,16 +124,22 @@ body {
       }
       
       .cateWrapper {
+        height: 100%;
         position: relative;
         min-width: 180px;
-        height: 100%;
         overflow: hidden;
         z-index: 2;
         margin: 5px 0;
 
+        .hasScroll {
+          height: 600px;
+          overflow: hidden;
+        }
+
         .tools {
           height: 30px;
-          width: auto;
+          width: 100%;
+          overflow: hidden;
           font-size: 12px;
           color: #fff;
           cursor: pointer;
@@ -172,6 +178,8 @@ body {
             margin: 6px 0 0 10px;
             overflow: hidden;
             float: left;
+            word-break: break-all;
+            word-wrap: break-word;
           }
         }
       }
@@ -190,8 +198,8 @@ body {
   .bottomBar {
     height: 64px;
     position: absolute;
+    right: 0;
     bottom: 0;
-    left: 0;
     z-index: 10;
 
     .taskContainer {
@@ -201,7 +209,7 @@ body {
 
       .task {
         height: 100%;
-        float: left;
+        float: right;
         width: 114px;
         overflow: hidden;
         -webkit-transition: width .5s ease;
