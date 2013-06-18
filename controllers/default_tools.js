@@ -152,9 +152,9 @@ exports.tools = {
                             "appUrl": "http://idata.alibaba-inc.com/links/ipage.htm"
                         },
                         {
-                            "name": "阿里测",
-                            "imgUrl": "toolsicon/icon_alibench.jpg",
-                            "appUrl": "http://alibench.com/"
+                            "name": "阿里度",
+                            "imgUrl": "toolsicon/icon_alibench.png",
+                            "appUrl": "http://alibench.taobao.com/"
                         }
 
                     ]

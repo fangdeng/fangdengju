@@ -63,7 +63,15 @@ define(function(require, exports, module) {
             showThisTask($(this));
         });
 
+        $('body').on('click', 'a.addToolBox', function(e) {
+            e.preventDefault();
+            return;
+        });
 
+        $('body').on('click', 'a.addWorkflow', function(e) {
+            e.preventDefault();
+            return;
+        });
     }
     // 创建对话框节点
     function createDialog( thisElement ) {

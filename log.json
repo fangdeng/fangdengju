@@ -1,0 +1,12 @@
+{
+    "appenders": [
+        { "type": "console" },
+        {
+            "type": "file",
+            "filename": "log/info.log",
+            "maxLogSize": 1048576,
+            "backups": 10,
+            "category": "info-logger"
+        }
+    ]
+}

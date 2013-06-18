@@ -1,11 +1,11 @@
 <% include header.html %>
 <link rel="stylesheet" href="/static/production/css/layout.css">
 <link rel="stylesheet" href="/static/production/css/dialog.css">
-<link rel="stylesheet" href="/static/scrollbar/perfect-scrollbar.css">
+<!--<link rel="stylesheet" href="/static/scrollbar/perfect-scrollbar.css">-->
 
 <div id="screen">
     <div class="bgWrapper">
-        <img src="/static/img/bgimg/bg_04.png" alt=""/>
+        <img src="/static/img/bgimg/bg_05.png" alt=""/>
     </div>
 
     <div class="main">
@@ -16,9 +16,9 @@
             <a class="logo" href="/"></a>
             <div class="navBar btn-toolbar">
                 <div class="btn-group">
-                    <a class="btn btn-large active" href="#"><i class="icon-th"></i>随便逛逛</a>
-                    <a class="btn btn-large" href="#"><i class="icon-briefcase"></i>我的工具箱</a>
-                    <a class="btn btn-large" href="#"><i class="icon-tasks"></i>我的工作流</a>
+                    <a class="btn btn-large active" href="/"><i class="icon-th"></i>随便逛逛</a>
+                    <a class="btn btn-large" href="/mytools.html"><i class="icon-briefcase"></i>我的工具箱</a>
+                    <a class="btn btn-large" href="/myworkflow.html"><i class="icon-tasks"></i>我的工作流</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,6 @@
                                 <li role="presentation"><a class="openApp" role="menuitem" href="#" data-app-link="<%= tools.design[i].appUrl %>" data-app-name="<%= tools.design[i].name %>" data-app-img-src="<%= tools.design[i].imgUrl %>"><i class="icon-share"></i> 打开</a></li>
                                 <li role="presentation"><a class="addToolBox" role="menuitem" href="#"><i class="icon-plus"></i> 加入到我的工具箱</a></li>
                                 <li role="presentation"><a class="addWorkflow" role="menuitem" href="#"><i class="icon-retweet"></i> 加入到我的工作流</a></li>
-                                <li role="presentation"><a class="appReference" role="menuitem" href="#"><i class="icon-book"></i> 工具文档</a></li>
                             </ul>
                         </div>
                     <% } %>
@@ -62,7 +61,6 @@
                                 <li role="presentation"><a class="openApp" role="menuitem" href="#" data-app-link="<%= tools.development[i].appUrl %>" data-app-name="<%= tools.development[i].name %>" data-app-img-src="<%= tools.development[i].imgUrl %>"><i class="icon-share"></i> 打开</a></li>
                                 <li role="presentation"><a class="addToolBox" role="menuitem" href="#"><i class="icon-plus"></i> 加入到我的工具箱</a></li>
                                 <li role="presentation"><a class="addWorkflow" role="menuitem" href="#"><i class="icon-retweet"></i> 加入到我的工作流</a></li>
-                                <li role="presentation"><a class="appReference" role="menuitem" href="#"><i class="icon-book"></i> 工具文档</a></li>
                             </ul>
                         </div>
                     <% } %>
@@ -85,7 +83,6 @@
                                 <li role="presentation"><a class="openApp" role="menuitem" href="#" data-app-link="<%= tools.test[i].appUrl %>" data-app-name="<%= tools.test[i].name %>" data-app-img-src="<%= tools.test[i].imgUrl %>"><i class="icon-share"></i> 打开</a></li>
                                 <li role="presentation"><a class="addToolBox" role="menuitem" href="#"><i class="icon-plus"></i> 加入到我的工具箱</a></li>
                                 <li role="presentation"><a class="addWorkflow" role="menuitem" href="#"><i class="icon-retweet"></i> 加入到我的工作流</a></li>
-                                <li role="presentation"><a class="appReference" role="menuitem" href="#"><i class="icon-book"></i> 工具文档</a></li>
                             </ul>
                         </div>
                     <% } %>
@@ -108,7 +105,6 @@
                                 <li role="presentation"><a class="openApp" role="menuitem" href="#" data-app-link="<%= tools.publish[i].appUrl %>" data-app-name="<%= tools.publish[i].name %>" data-app-img-src="<%= tools.publish[i].imgUrl %>"><i class="icon-share"></i> 打开</a></li>
                                 <li role="presentation"><a class="addToolBox" role="menuitem" href="#"><i class="icon-plus"></i> 加入到我的工具箱</a></li>
                                 <li role="presentation"><a class="addWorkflow" role="menuitem" href="#"><i class="icon-retweet"></i> 加入到我的工作流</a></li>
-                                <li role="presentation"><a class="appReference" role="menuitem" href="#"><i class="icon-book"></i> 工具文档</a></li>
                             </ul>
                         </div>
                     <% } %>
@@ -131,7 +127,6 @@
                                 <li role="presentation"><a class="openApp" role="menuitem" href="#" data-app-link="<%= tools.monitoring[i].appUrl %>" data-app-name="<%= tools.monitoring[i].name %>" data-app-img-src="<%= tools.monitoring[i].imgUrl %>"><i class="icon-share"></i> 打开</a></li>
                                 <li role="presentation"><a class="addToolBox" role="menuitem" href="#"><i class="icon-plus"></i> 加入到我的工具箱</a></li>
                                 <li role="presentation"><a class="addWorkflow" role="menuitem" href="#"><i class="icon-retweet"></i> 加入到我的工作流</a></li>
-                                <li role="presentation"><a class="appReference" role="menuitem" href="#"><i class="icon-book"></i> 工具文档</a></li>
                             </ul>
                         </div>
                     <% } %>

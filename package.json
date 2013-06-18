@@ -6,7 +6,8 @@
     "express": "3.x",
     "path": "~0.4.9",
     "mongoose": "~3.5.5",
-    "ejs": "0.8.4"
+    "ejs": "0.8.4",
+    "log4js": "0.6.6"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

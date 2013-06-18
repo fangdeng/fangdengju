@@ -116,14 +116,9 @@ body {
   z-index: 2;
   margin: 5px 0;
 }
-.main .content .cate .cateWrapper .hasScroll {
-  height: 600px;
-  overflow: hidden;
-}
 .main .content .cate .cateWrapper .tools {
   height: 30px;
   width: 100%;
-  overflow: hidden;
   font-size: 12px;
   color: #fff;
   cursor: pointer;
@@ -287,4 +282,10 @@ body {
 }
 .main .bottomBar .nextTask .taskNextDisabled:hover {
   background-position: -66px -97px;
+}
+.addToolBox:hover {
+  cursor: text;
+}
+.addWorkflow:hover {
+  cursor: text;
 }

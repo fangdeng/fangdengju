@@ -1,3 +1,10 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: dongming
+ * Date: 13-6-17
+ * Time: 上午11:06
+ * To change this template use File | Settings | File Templates.
+ */
 define(function(require, exports, module) {
     // 引入jQuery
     var $ = require('jquery');
@@ -6,17 +13,12 @@ define(function(require, exports, module) {
     // 引入jquery ui
     require('jqueryui')($);
 
-//    require('mousewheel')($);
-//    require('scrollbar')($);
-
     var resizePage = require('./pageresize');
 
     resizePage.init();
 
-    var dialog = require('./dialog');
-
-    dialog.init();
-
-//    $('div.cateWrapper', '#screen').perfectScrollbar();
+    $('#myModal').modal({
+        backdrop: false
+    });
 
 });
