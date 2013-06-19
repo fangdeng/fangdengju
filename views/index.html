@@ -1,11 +1,11 @@
 <% include header.html %>
-<link rel="stylesheet" href="/static/production/css/layout.css">
-<link rel="stylesheet" href="/static/production/css/dialog.css">
-<!--<link rel="stylesheet" href="/static/scrollbar/perfect-scrollbar.css">-->
+<link rel="stylesheet" href="./static/production/css/layout.css">
+<link rel="stylesheet" href="./static/production/css/dialog.css">
+<!--<link rel="stylesheet" href="./static/scrollbar/perfect-scrollbar.css">-->
 
 <div id="screen">
     <div class="bgWrapper">
-        <img src="/static/img/bgimg/bg_05.png" alt=""/>
+        <img src="./static/img/bgimg/bg_05.png" alt=""/>
     </div>
 
     <div class="main">
@@ -16,9 +16,9 @@
             <a class="logo" href="/"></a>
             <div class="navBar btn-toolbar">
                 <div class="btn-group">
-                    <a class="btn btn-large active" href="/"><i class="icon-th"></i>随便逛逛</a>
-                    <a class="btn btn-large" href="/mytools.html"><i class="icon-briefcase"></i>我的工具箱</a>
-                    <a class="btn btn-large" href="/myworkflow.html"><i class="icon-tasks"></i>我的工作流</a>
+                    <a class="btn btn-large active" href="./"><i class="icon-th"></i>随便逛逛</a>
+                    <a class="btn btn-large" href="./mytools.html"><i class="icon-briefcase"></i>我的工具箱</a>
+                    <a class="btn btn-large" href="./myworkflow.html"><i class="icon-tasks"></i>我的工作流</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
                             <div class="appIcon">
-                                <img src="/static/upload/<%= tools.design[i].imgUrl %>" alt=""/>
+                                <img src="./static/upload/<%= tools.design[i].imgUrl %>" alt=""/>
                             </div>
                             <div class="appName" title="<%= tools.design[i].name %>"><%= tools.design[i].name %></div>
                             <ul class="dropdown-menu" role="menu">
@@ -54,7 +54,7 @@
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
                             <div class="appIcon">
-                                <img src="/static/upload/<%= tools.development[i].imgUrl %>" alt=""/>
+                                <img src="./static/upload/<%= tools.development[i].imgUrl %>" alt=""/>
                             </div>
                             <div class="appName" title="<%= tools.development[i].name %>"><%= tools.development[i].name %></div>
                             <ul class="dropdown-menu" role="menu">
@@ -76,7 +76,7 @@
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
                             <div class="appIcon">
-                                <img src="/static/upload/<%= tools.test[i].imgUrl %>" alt=""/>
+                                <img src="./static/upload/<%= tools.test[i].imgUrl %>" alt=""/>
                             </div>
                             <div class="appName" title="<%= tools.test[i].name %>"><%= tools.test[i].name %></div>
                             <ul class="dropdown-menu" role="menu">
@@ -98,7 +98,7 @@
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
                             <div class="appIcon">
-                                <img src="/static/upload/<%= tools.publish[i].imgUrl %>" alt=""/>
+                                <img src="./static/upload/<%= tools.publish[i].imgUrl %>" alt=""/>
                             </div>
                             <div class="appName" title="<%= tools.publish[i].name %>"><%= tools.publish[i].name %></div>
                             <ul class="dropdown-menu" role="menu">
@@ -120,7 +120,7 @@
                         <div class="tools dropdown">
                             <div class="toolsInner dropdown-toggle" role="button" data-toggle="dropdown"></div>
                             <div class="appIcon">
-                                <img src="/static/upload/<%= tools.monitoring[i].imgUrl %>" alt=""/>
+                                <img src="./static/upload/<%= tools.monitoring[i].imgUrl %>" alt=""/>
                             </div>
                             <div class="appName" title="<%= tools.monitoring[i].name %>"><%= tools.monitoring[i].name %></div>
                             <ul class="dropdown-menu" role="menu">
@@ -156,8 +156,8 @@
 
 
 <script type="text/javascript"
-        src="/static/seajs/dist/sea.js"
-        data-config="/static/config.js"
-        data-main="/static/development/js/index.js"></script>
+        src="./static/seajs/dist/sea.js"
+        data-config="./static/config.js"
+        data-main="./static/development/js/index.js"></script>
 
 <% include footer.html %>

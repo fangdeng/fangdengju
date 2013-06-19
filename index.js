@@ -70,3 +70,4 @@ app.get('/myworkflow.html', function(req, res) {
 app.listen(port);
 
 logger.info('Server start at port', port);
+console.log('Server start at port', port);

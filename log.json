@@ -1,6 +1,5 @@
 {
     "appenders": [
-        { "type": "console" },
         {
             "type": "file",
             "filename": "log/info.log",
