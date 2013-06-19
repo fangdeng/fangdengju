@@ -5,7 +5,7 @@
 .ui-dialog .ui-dialog-titlebar {
   padding: 0 10px;
   height: 25px;
-  background: url('/static/img/repeat_x.png') repeat 0 -31px;
+  background: url('http://img.china.alibaba.com/cms/upload/other/fangdengju/repeat_x.png') repeat 0 -31px;
   border: none;
   border-bottom: 1px solid #fcfcfc;
 }
@@ -32,7 +32,7 @@
 .customDialog .handleBar .handleWindow .icon-minisize,
 .customDialog .handleBar .handleWindow .icon-maxsize,
 .customDialog .handleBar .handleWindow .icon-close {
-  background-image: url('/static/img/dialog.png');
+  background-image: url('http://img.china.alibaba.com/cms/upload/other/fangdengju/dialog.png');
 }
 .customDialog .handleBar .handleWindow .icon-minisize {
   background-position: -9px -36px;
