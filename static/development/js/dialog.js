@@ -182,7 +182,7 @@ define(function(require, exports, module) {
         var html = '<div class="task taskCurrent" dialogId="' + dialogId + '">\
                         <a class="taskItem" href="#">\
                             <div class="taskIcon">\
-                                <img src="/static/upload/' + imgsrc + '" alt=""/>\
+                                <img src="./static/upload/' + imgsrc + '" alt=""/>\
                             </div>\
                             <div class="taskTitle" title="' + title + '">' + title + '</div>\
                         </a>\
