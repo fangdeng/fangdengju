@@ -19,6 +19,11 @@ module.exports = function(grunt) {
         },
 
         uglify: {
+            jquery: {
+                files: {
+                    'static/lib/jquery-1.9.1.min.js': 'static/lib/jquery-1.9.1.js'
+                }
+            },
             bootstrap: {
                 files: {
                     'static/bootstrap/js/bootstrap.min.js': 'static/bootstrap/js/bootstrap.js'
@@ -39,6 +44,7 @@ module.exports = function(grunt) {
     grunt.registerTask('watchless', ['watch']);
     grunt.registerTask('bootstrapmin', ['uglify:bootstrap']);
     grunt.registerTask('jqueryuimin', ['uglify:jqueryui']);
+    grunt.registerTask('jquerymin', ['uglify:jquery']);
 
 };
 
