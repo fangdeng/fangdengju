@@ -18,7 +18,7 @@ define(function(require, exports, module) {
     resizePage.init();
 
     $('#myModal').modal({
-        backdrop: false
+        backdrop: true
     });
 
 });
