@@ -101,7 +101,7 @@ define(function(require, exports, module) {
         $(id).dialog({
             autoOpen: false,
             dialogClass: 'customDialog',
-            width: windowWidth * 0.6,
+            width: windowWidth * 0.85,
             height: windowHeight * 0.9,
             position: {
                 my: "center",
