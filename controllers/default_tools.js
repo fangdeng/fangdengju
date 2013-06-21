@@ -25,12 +25,12 @@ exports.tools = {
                             "appUrl": "http://designmodo.com/responsive-test/"
                         },
                         {
-                            "name": "codepen",
+                            "name": "CodePen",
                             "imgUrl": "toolsicon/icon_codepen.png",
                             "appUrl": "http://codepen.io/stuffit/pen/KrAwx"
                         },
                         {
-                            "name": "jsfiddle",
+                            "name": "JsFiddle",
                             "imgUrl": "toolsicon/icon_jshtmlcss_1.png",
                             "appUrl": "http://jsfiddle.net/"
                         },
@@ -48,6 +48,11 @@ exports.tools = {
                             "name": "Icon Finder",
                             "imgUrl": "toolsicon/icon_iconfinder.png",
                             "appUrl": "http://www.iconfinder.com/search/?q=ios7"
+                        },
+                        {
+                            "name": "Icon Fonts Generator",
+                            "imgUrl": "toolsicon/icon_iconfonts.png",
+                            "appUrl": "http://fontello.com/"
                         }
                     ],
     // 开发阶段
