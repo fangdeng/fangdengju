@@ -88,11 +88,11 @@ define(function(require, exports, module) {
 
             $('<div id="' + dialogID + '"><div class="waitLoadding"><div class="wrapper"><img src="./static/img/loading.gif" alt=""/><div class="shuoming">稍等片刻...</div></div></div><iframe src="' + appUrl + '" frameborder="0" width="100%" height="100%"></iframe></div>').appendTo($('div.main', '#screen')).hide();
             thisElement.attr('dialogId', dialogID);
-            initDialog(dialogID, appName, imgsrc);
+            initDialog(dialogID, appName, imgsrc, appUrl);
         }
     }
 
-    function initDialog( dialogID, appName, imgsrc ) {
+    function initDialog( dialogID, appName, imgsrc, appUrl ) {
         var id = '#' + dialogID,
             windowHeight = $(window).innerHeight(),
             offset = Math.floor(Math.random() * 100),
@@ -113,6 +113,7 @@ define(function(require, exports, module) {
         var toolbar = '<div class="handleBar">\
                             <div class="handleFunction">\
                                 <a href="#" class="refreshApp" title="刷新当前页面"><i class="icon-refresh"></i></a>\
+                                <a href="' + appUrl + '" class="openNewWindow" title="新窗口打开页面" target="_blank"><i class="icon-share"></i></a>\
                                 <a href="#" class="addToolBox" title="添加到工具箱"><i class="icon-plus"></i></a>\
                                 <a href="#" class="addWorkflow" title="添加到工作流"><i class="icon-retweet"></i></a>\
                             </div>\

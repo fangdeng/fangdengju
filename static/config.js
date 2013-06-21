@@ -8,10 +8,5 @@ seajs.config({
         'scrollbar': '../../scrollbar/perfect-scrollbar.js'
     },
 
-    // 路径配置
-    paths: {
-        'gallery': 'https://a.alipayobjects.com/gallery'
-    },
-
     debug: true
 });

@@ -10,29 +10,29 @@ exports.tools = {
     // 设计阶段
     "design":       [
                         {
+                            "name": "PSD2CMS",
+                            "imgUrl": "toolsicon/icon_psd2cms.png",
+                            "appUrl": "http://10.20.156.76:3000/help"
+                        },
+                        {
                             "name": "Demo中心",
                             "imgUrl": "toolsicon/icon_democenter.png",
                             "appUrl": "http://demo.alibaba-inc.com/"
                         },
                         {
                             "name": "响应式设计工具",
-                            "imgUrl": "toolsicon/icon_responsive_1.png",
-                            "appUrl": "http://resizemybrowser.com/"
-                        },
-                        {
-                            "name": "designmodo",
                             "imgUrl": "toolsicon/icon_responsive_2.png",
                             "appUrl": "http://designmodo.com/responsive-test/"
+                        },
+                        {
+                            "name": "codepen",
+                            "imgUrl": "toolsicon/icon_codepen.png",
+                            "appUrl": "http://codepen.io/stuffit/pen/KrAwx"
                         },
                         {
                             "name": "jsfiddle",
                             "imgUrl": "toolsicon/icon_jshtmlcss_1.png",
                             "appUrl": "http://jsfiddle.net/"
-                        },
-                        {
-                            "name": "PSD2CMS",
-                            "imgUrl": "toolsicon/icon_default.png",
-                            "appUrl": "http://10.20.156.76:3000/help"
                         },
                         {
                             "name": "CSS3 Generator",
@@ -69,8 +69,13 @@ exports.tools = {
                         },
                         {
                             "name": "JSON可视化工具",
-                            "imgUrl": "toolsicon/icon_default.png",
+                            "imgUrl": "toolsicon/icon_jsonview.png",
                             "appUrl": "http://www.bejson.com/go.php?u=http://www.bejson.com/jsonviewernew/"
+                        },
+                        {
+                            "name": "占位图片生成器",
+                            "imgUrl": "toolsicon/icon_placeholder.png",
+                            "appUrl": "http://placeimg.com/"
                         },
                         {
                             "name": "jQuery API",
@@ -79,7 +84,7 @@ exports.tools = {
                         },
                         {
                             "name": "javascript API",
-                            "imgUrl": "toolsicon/icon_default.png",
+                            "imgUrl": "toolsicon/icon_js.png",
                             "appUrl": "http://www.javascripture.com/"
                         },
                         {
@@ -89,12 +94,12 @@ exports.tools = {
                         },
                         {
                             "name": "css auto reload",
-                            "imgUrl": "toolsicon/icon_plugin.png",
+                            "imgUrl": "toolsicon/icon_cssautoload.png",
                             "appUrl": "http://wd.alibaba-inc.com/doc/page/tools/css-auto-reload"
                         },
                         {
                             "name": "DCMS页面模板edit增强插件",
-                            "imgUrl": "toolsicon/icon_plugin.png",
+                            "imgUrl": "toolsicon/icon_edit.png",
                             "appUrl": "http://wd.alibaba-inc.com/doc/page/tools/dcms-edit-plugin"
                         }
                     ],
@@ -111,19 +116,20 @@ exports.tools = {
                             "appUrl": "http://wd.alibaba-inc.com/jsonp/"
                         },
                         {
-                            "name": "javascript性能测试",
-                            "imgUrl": "toolsicon/icon_default.png",
-                            "appUrl": "http://jsperf.com/"
-                        },
-                        {
-                            "name": "中文站一键登录插件",
-                            "imgUrl": "toolsicon/icon_plugin.png",
-                            "appUrl": "http://wd.alibaba-inc.com/doc/page/tools/ali-login"
-                        },
-                        {
                             "name": "盖娅平台",
                             "imgUrl": "toolsicon/icon_gaiya.png",
                             "appUrl": "http://mytest.alibaba-inc.com/portal/"
+                        },
+                        {
+                            "name": "JS控制台",
+                            "imgUrl": "toolsicon/icon_jsconsole.png",
+                            "appUrl": "http://jsconsole.com/"
+                        }
+                        ,
+                        {
+                            "name": "中文站一键登录插件",
+                            "imgUrl": "toolsicon/icon_login.png",
+                            "appUrl": "http://wd.alibaba-inc.com/doc/page/tools/ali-login"
                         }
                     ],
     // 发布阶段
@@ -152,7 +158,7 @@ exports.tools = {
                             "appUrl": "http://idata.alibaba-inc.com/links/ipage.htm"
                         },
                         {
-                            "name": "阿里度",
+                            "name": "阿里度性能监控",
                             "imgUrl": "toolsicon/icon_alibench.png",
                             "appUrl": "http://alibench.taobao.com/"
                         }
