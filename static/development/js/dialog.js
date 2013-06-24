@@ -166,7 +166,7 @@ define(function(require, exports, module) {
             windowWidth = $(window).innerWidth();
 
         ele.closest('div.ui-dialog-titlebar').next().dialog({
-            width: windowWidth * 0.6,
+            width: windowWidth * 0.85,
             height: windowHeight * 0.9
         });
 
