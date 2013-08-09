@@ -165,7 +165,7 @@ exports.tools = {
                         {
                             "name": "阿里度性能监控",
                             "imgUrl": "toolsicon/icon_alibench.png",
-                            "appUrl": "http://alibench.taobao.com/"
+                            "appUrl": "http://www.alibench.com/"
                         }
 
                     ]
