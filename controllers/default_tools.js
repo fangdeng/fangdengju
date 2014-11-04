@@ -65,7 +65,7 @@ exports.tools = {
                         {
                             "name": "正则验证工具",
                             "imgUrl": "toolsicon/icon_regularexp_1.gif",
-                            "appUrl": "http://www.regexpal.com/"
+                            "appUrl": "http://www.bejson.com/go.html?u=http://www.bejson.com/regex/"
                         },
                         {
                             "name": "正则可视化工具",
